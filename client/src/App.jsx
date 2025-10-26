@@ -6,7 +6,6 @@ import routes from "./Routes/routesConfig.jsx";
 import ProtectedRoutes from "./Utils/ProtectedRoutes.jsx";
 
 const App = () => {
-	console.log(routes);
 	return (
 		<>
 			<Header />
