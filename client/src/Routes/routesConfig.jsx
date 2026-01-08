@@ -5,12 +5,13 @@ import Poland from "../Pages/Poland.jsx";
 import Usa from "../Pages/Usa.jsx";
 import Other from "../Pages/Other.jsx";
 import NewCompany from "../Pages/NewCompany.jsx";
+import Fuck from "../Pages/Fuck.jsx";
 
 const routes = [
 	{
 		path: "/",
 		element: <OnBoarding />,
-		isPrivate: true,
+		isPrivate: false,
 	},
 	{
 		path: "/country",
@@ -23,25 +24,18 @@ const routes = [
 		isPrivate: false,
 	},
 	{
-		path: "/new-company",
+		path: "/:country/:city",
 		element: <NewCompany />,
 		isPrivate: false,
 	},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
 	{
-		path: "/poland",
-		element: <Poland />,
+		path: "/*",
+		element: <Fuck />,
+		isPrivate: false,
+	},
+	{
+		path: "/new-company",
+		element: <NewCompany />,
 		isPrivate: false,
 	},
 	{
@@ -59,6 +53,17 @@ const routes = [
 		element: <Login />,
 		isPrivate: false,
 	},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
 ];
 
 export default routes;
